@@ -1,8 +1,37 @@
 <?php
-class datebase extends SQLiteDatabase{
-
-
-
+class datebase extends SQLite3{
+	
+	
+	function arrayQuery($sql){
+		if(isset($sql)){
+			$result = $this->query($sql);
+			if($result){
+				if($result->columnName(0)){
+					while ($row = $result->fetchArray(SQLITE3_ASSOC)){
+						$array[] = $row;
+					}			
+				}
+				if(isset($array)){
+					if(is_array($array)){
+						return $array;
+					}
+					else{
+						return false;
+					}			
+				}
+				else{
+					return true;
+				}
+			}
+			else{
+				return false;
+			}
+		}
+		else{
+			return false;
+		}
+	}
+	
 	function createTableGame(){
 		$result = $this->arrayQuery("SELECT name FROM sqlite_master WHERE name='".$this->tableGame."'");
 		if(!isset($result[0])){
@@ -89,5 +118,8 @@ class datebase extends SQLiteDatabase{
 			return false;
 		}
     }
+	function __destruct(){
+		$this->close();
+	}
 }
 ?>

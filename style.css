@@ -1,0 +1,16 @@
+.card{
+	text-align: center;
+	background: #afeeee;
+	height: 200px;
+	width: 300px;
+}
+.card12{
+	text-align: center;
+	display: block;
+	background: #ff0000;
+	height: 20px;
+	width: 100px;
+	position: absolute;
+	top: 50px;
+	left: 800px;
+}
