@@ -4,7 +4,7 @@ $(document).ready(function()
 	{
 		$.each(json, function(i, val)
 		{
-			$('#cards').append('<div id="card'+val.id+'" class="card"><br />');
+			$('#cards').append('<div id="card'+val.id+'" class="card"></div>');
 			$('#card'+val.id).append('<div class="id">card numder: '+val.id+'</div>')
 					.append('<div class="firstName">Имя: '+val.firstName+'</div>')
 					.append('<div class="lastName">Фамилия: '+val.lastName+'</div>')
