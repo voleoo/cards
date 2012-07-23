@@ -1,16 +1,59 @@
+body{
+	background: #dfdfdf;
+}
+#cards{
+	position: relative;
+}
 .card{
+	position: relative;
 	text-align: center;
 	background: #afeeee;
-	height: 200px;
+	border: 2px solid #fffff0;
+	height: 160px;
 	width: 300px;
 }
-.card12{
-	text-align: center;
-	display: block;
-	background: #ff0000;
-	height: 20px;
-	width: 100px;
+.close{
 	position: absolute;
-	top: 50px;
-	left: 800px;
+	right: 0px;
+	top: 0px;
+}
+.company{
+	text-align: center;
+	font-family: 'Times New Roman', Times, serif;
+	font-size: 35px;
+}
+.firstName{
+	display: inline-block;
+	padding: 0px 0px 0px 10px;
+	font-family: 'Times New Roman', Times, serif;
+	font-style: oblique;
+	font-size: 25px;
+}
+.lastName{
+	display: inline-block;
+	padding: 0px 0px 0px 10px;
+	font-family: 'Times New Roman', Times, serif;
+	font-style: oblique;
+	font-size: 25px;
+}
+.post{
+	font-size: 18px;
+}
+.phone{
+	text-align: left;
+	position: absolute;
+	bottom: 36px;
+	padding: 0px 0px 0px 10px;
+}
+.skype{
+	text-align: left;
+	position: absolute;
+	bottom: 18px;
+	padding: 0px 0px 0px 10px;
+}
+.www{
+	text-align: left;
+	position: absolute;
+	bottom: 0px;
+	padding: 0px 0px 0px 10px;
 }
